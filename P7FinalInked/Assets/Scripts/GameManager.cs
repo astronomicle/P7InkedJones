@@ -6,14 +6,16 @@ using UnityEngine.UI;
 
 public class GameManager : MonoBehaviour
 {
-    public bool isGameActive;
+    private bool isGameActive;
     public GameObject titleScreen;
     public Button startButton;
+    private PlayerController PCS;
    
 
     void Start()
     {
-        
+        isGameActive = false;
+        PCS = GameObject.Find("Sam").GetComponent<PlayerController>();
     }
 
     public void StartGame()
@@ -25,6 +27,9 @@ public class GameManager : MonoBehaviour
 
     void Update()
     {
-        
+        if (isGameActive == true)
+        {
+            PCS.Shooting();
+        }
     }
 }

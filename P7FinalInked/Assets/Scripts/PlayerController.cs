@@ -10,7 +10,6 @@ public class PlayerController : MonoBehaviour
     public GameObject projectilePrefab;
     public Transform projectileSpawnPoint;
     public Animator playerAnim;
-    public bool gameOver;
     private Rigidbody playerRb;
 
     void Start()
@@ -25,8 +24,11 @@ public class PlayerController : MonoBehaviour
         {
             playerAnim.SetTrigger("Run_trig");
             transform.Translate(Vector3.forward * Time.deltaTime * speed);
-        }
+        }       
+    }
 
+    public void Shooting()
+    {
         if (Input.GetMouseButtonDown(0))
         {
             Instantiate(projectilePrefab, projectileSpawnPoint.position, projectilePrefab.transform.rotation);
