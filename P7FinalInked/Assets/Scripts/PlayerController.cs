@@ -16,15 +16,27 @@ public class PlayerController : MonoBehaviour
     {
         playerRb = GetComponent<Rigidbody>();
         playerAnim = GetComponent<Animator>();
+       
     }
 
     void Update()
     {
-        if (Input.GetKeyDown(KeyCode.W))
+        horizontalInput = Input.GetAxis("Horizontal");
+        verticalInput = Input.GetAxis("Vertical");
+     
+        
+
+        if (Input.GetKey(KeyCode.W))
         {
             playerAnim.SetTrigger("Run_trig");
-            transform.Translate(Vector3.forward * Time.deltaTime * speed);
-        }       
+            playerAnim.ResetTrigger("Idle_trig");
+            transform.Translate(Vector3.forward * verticalInput * Time.deltaTime * speed);
+        }
+        else
+        {
+            playerAnim.ResetTrigger("Run_trig");
+            playerAnim.SetTrigger("Idle_trig");
+        }
     }
 
     public void Shooting()

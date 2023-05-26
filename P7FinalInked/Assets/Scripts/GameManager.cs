@@ -9,6 +9,7 @@ public class GameManager : MonoBehaviour
     private bool isGameActive;
     public GameObject titleScreen;
     public Button startButton;
+    public Button continueButton;
     private PlayerController PCS;
    
 
