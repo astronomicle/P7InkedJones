@@ -4,7 +4,10 @@ using UnityEngine;
 
 public class ShootingForward : MonoBehaviour
 {
-    public float speed = 50.0f;
+    public float bulletSpeed = 50.0f;
+   
+
+   
 
     void Start()
     {
@@ -13,6 +16,6 @@ public class ShootingForward : MonoBehaviour
 
     void Update()
     {
-        transform.Translate(Vector3.forward * Time.deltaTime * speed);
+       
     }
 }
