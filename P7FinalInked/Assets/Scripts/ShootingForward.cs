@@ -4,10 +4,6 @@ using UnityEngine;
 
 public class ShootingForward : MonoBehaviour
 {
-    public float bulletSpeed = 50.0f;
-   
-
-   
 
     void Start()
     {
@@ -16,6 +12,6 @@ public class ShootingForward : MonoBehaviour
 
     void Update()
     {
-       
+        
     }
 }

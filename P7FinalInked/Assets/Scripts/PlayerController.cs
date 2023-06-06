@@ -13,21 +13,38 @@ public class PlayerController : MonoBehaviour
     public Animator playerAnim;
     private Rigidbody playerRb;
     public Vector2 turn;
-    AudioSource audioSource;
-    public AudioClip bulletSound;
+    public int damageAmount = 20;
+
+    private EnemyController enemyController;
+    public float timeInvincible = 2.0f;
+    bool isInvincible;
+    float invincibleTimer;
+
+    public int health { get { return currentHealth; } }
+
+    private int currentHealth;
+    public int maxHealth = 100;
+    private Transform playerTransform;
 
 
     void Start()
     {
         playerRb = GetComponent<Rigidbody>();
         playerAnim = GetComponent<Animator>();
-        audioSource = GetComponent<AudioSource>();
+
+
+        currentHealth = maxHealth;
+
+        playerTransform = GameObject.FindGameObjectWithTag("Enemy").transform;
 
     }
 
+
+
+
     void Update()
     {
-        
+
 
         turn.x += Input.GetAxis("Mouse X");
 
@@ -79,7 +96,6 @@ public class PlayerController : MonoBehaviour
 
 
 
-
     }
 
 
@@ -88,15 +104,21 @@ public class PlayerController : MonoBehaviour
     {
         if (Input.GetMouseButtonDown(0))
         {
-            PlaySound(bulletSound);
+
             var bullet = Instantiate(bulletPrefab, transform.Find("BulletSpawn").position, transform.Find("BulletSpawn").rotation);
             bullet.GetComponent<Rigidbody>().AddForce(transform.forward * bulletSpeed);
+
         }
     }
 
-    public void PlaySound(AudioClip clip)
+
+
+
+    private void OnTriggerEnter(Collider other)
     {
-        audioSource.PlayOneShot(clip);
+        
     }
 
 }
+    
+

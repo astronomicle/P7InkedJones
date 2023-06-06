@@ -13,6 +13,7 @@ GameObject:
   - component: {fileID: 1787711740648841477}
   - component: {fileID: 2538597523747959545}
   - component: {fileID: 6910767563644412806}
+  - component: {fileID: -8104414595219424469}
   m_Layer: 0
   m_Name: PistolBullet
   m_TagString: Untagged
@@ -113,4 +114,16 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 158684206e7ef7f4fa533b0e67ec8e13, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  bulletSpeed: 1000
+--- !u!114 &-8104414595219424469
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 274655990421700816}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 5803079158bd54c41a26aeb8fd963a2d, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  damageAmount: 20

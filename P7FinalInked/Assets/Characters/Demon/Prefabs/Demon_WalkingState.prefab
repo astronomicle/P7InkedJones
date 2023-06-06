@@ -3054,6 +3054,7 @@ GameObject:
   m_Component:
   - component: {fileID: 5499592132491517078}
   - component: {fileID: 6860319794504448289}
+  - component: {fileID: 899983567}
   m_Layer: 0
   m_Name: Demon_WalkingState
   m_TagString: Untagged
@@ -3098,6 +3099,19 @@ Animator:
   m_HasTransformHierarchy: 1
   m_AllowConstantClipSamplingOptimization: 1
   m_KeepAnimatorControllerStateOnDisable: 0
+--- !u!65 &899983567
+BoxCollider:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 5123312163049489964}
+  m_Material: {fileID: 0}
+  m_IsTrigger: 0
+  m_Enabled: 1
+  serializedVersion: 2
+  m_Size: {x: 5.7269287, y: 12.95985, z: 3.0499268}
+  m_Center: {x: -2.1758423, y: 16.488317, z: 0.08770752}
 --- !u!1 &5137782135344960078
 GameObject:
   m_ObjectHideFlags: 0
